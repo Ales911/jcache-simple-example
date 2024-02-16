@@ -21,7 +21,7 @@ public class BookService {
     
     @CacheResult(cacheName = "books", skipGet = true)
     public Book add(@CacheKey String isbn, Book book) {
-        logger.info("add a book with isbn: " + book.getIsbn());
+        logger.info("add a book with isbn: " + book.isbn());
         return bookRepository.add(book);
     }
     
@@ -43,10 +43,9 @@ public class BookService {
     }
     
     @CacheRemove(cacheName = "books", afterInvocation = true)
-    public boolean remove(@CacheKey String isbn) {
+    public void remove(@CacheKey String isbn) {
         logger.info("remove book by isbn: " + isbn);
-        return bookRepository.remove(isbn);
+        bookRepository.remove(isbn);
     }
-    
 
 }

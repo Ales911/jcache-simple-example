@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path = "/book")
+@RequestMapping(path = "/books")
 public class BookController {
     
     @Autowired
@@ -26,9 +26,9 @@ public class BookController {
     
     @PostMapping
     public ResponseEntity<Book> create(@RequestBody Book book) {
-        log.info("call bookService for create a book with isbn {}", book.getIsbn());
+        log.info("call bookService for create a book with isbn {}", book.isbn());
         return ResponseEntity.status(HttpStatus.CREATED)
-                .body(bookService.add(book.getIsbn(), book));
+                .body(bookService.add(book.isbn(), book));
     }
     
     @GetMapping(path = "/{isbn}")
@@ -49,7 +49,7 @@ public class BookController {
     @PutMapping("/{isbn}")
     public ResponseEntity<Book> update(@PathVariable String isbn, @RequestBody Book book) {
         log.info("call bookService for update a book with isbn {}", isbn);
-        return ResponseEntity.status(HttpStatus.ACCEPTED)
+        return ResponseEntity.status(HttpStatus.OK)
                 .body(bookService.update(isbn, book));
     }
     
@@ -57,7 +57,7 @@ public class BookController {
     public ResponseEntity delete(@PathVariable String isbn) {
         log.info("call bookService for delete a book with isbn {}", isbn);
         bookService.remove(isbn);
-        return ResponseEntity.status(HttpStatus.ACCEPTED).build();
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
 
 }

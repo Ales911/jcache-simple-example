@@ -1,4 +1,4 @@
-package by.lyofa.exercises;
+package by.lyofa;
 
 
 public class FirstTask {

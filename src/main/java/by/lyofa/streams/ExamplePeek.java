@@ -1,4 +1,4 @@
-package by.lyofa.exercises.stream;
+package by.lyofa.streams;
 
 import java.util.stream.Stream;
 

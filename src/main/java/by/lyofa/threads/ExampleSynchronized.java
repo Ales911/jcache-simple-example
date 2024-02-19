@@ -1,4 +1,4 @@
-package by.lyofa.exercises.threads;
+package by.lyofa.threads;
 
 public class ExampleSynchronized {
 

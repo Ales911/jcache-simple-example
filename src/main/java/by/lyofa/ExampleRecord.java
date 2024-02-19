@@ -1,4 +1,4 @@
-package by.lyofa.exercises;
+package by.lyofa;
 
 import java.util.Map;
 

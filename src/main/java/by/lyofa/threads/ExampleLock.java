@@ -1,4 +1,4 @@
-package by.lyofa.exercises.threads;
+package by.lyofa.threads;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;

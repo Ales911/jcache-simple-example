@@ -1,6 +1,6 @@
-package by.lyofa.exercises;
+package by.lyofa;
 
-import by.lyofa.exercises.stream.ExampleDropWhile;
+import by.lyofa.streams.ExampleDropWhile;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

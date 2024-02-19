@@ -1,4 +1,4 @@
-package by.lyofa.exercises.threads;
+package by.lyofa.threads;
 
 import java.util.Random;
 import java.util.stream.IntStream;

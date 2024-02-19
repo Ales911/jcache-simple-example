@@ -1,4 +1,4 @@
-package com.example.jcachesimpleexample;
+package by.lyofa.jcachesimpleexample;
 
 import java.util.List;
 import org.junit.jupiter.api.Assertions;

@@ -1,4 +1,4 @@
-package com.example.jcachesimpleexample;
+package by.lyofa.jcachesimpleexample;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

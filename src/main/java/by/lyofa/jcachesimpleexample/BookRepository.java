@@ -1,4 +1,4 @@
-package com.example.jcachesimpleexample;
+package by.lyofa.jcachesimpleexample;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class BookRepository {
 
-    private static final String BOOK_NOT_FOUND = "No book found the isbn: $s";
+    private static final String BOOK_NOT_FOUND = "No book found for isbn: %s";
     private final List<Book> books = new ArrayList<>();
 
     public BookRepository() {
@@ -17,13 +17,13 @@ public class BookRepository {
         books.add(new Book("isbn3", "author3", "title3"));
     }
 
-    public List<Book> findAll() {
-        return books;
-    }
-
     public Book add(Book book) {
         books.add(book);
         return book;
+    }
+
+    public List<Book> findAll() {
+        return books;
     }
 
     public Book findByIsbn(String isbn) {
@@ -38,7 +38,7 @@ public class BookRepository {
         final ListIterator<Book> iterator = books.listIterator();
         while (iterator.hasNext()) {
             final Book next = iterator.next();
-            if (next.isbn().equals(book.isbn())) {
+            if (next.isbn().equals(isbn)) {
                 // Replace element
                 iterator.set(book);
                 success = true;

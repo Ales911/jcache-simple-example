@@ -1,5 +1,6 @@
-package com.example.jcachesimpleexample;
+package by.lyofa.jcachesimpleexample;
 
+import jakarta.validation.Valid;
 import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,7 +26,7 @@ public class BookController {
     private final static Logger log = LoggerFactory.getLogger(BookController.class);
     
     @PostMapping
-    public ResponseEntity<Book> create(@RequestBody Book book) {
+    public ResponseEntity<Book> create(@RequestBody @Valid Book book) {
         log.info("call bookService for create a book with isbn {}", book.isbn());
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(bookService.add(book.isbn(), book));
@@ -47,7 +48,7 @@ public class BookController {
     }
     
     @PutMapping("/{isbn}")
-    public ResponseEntity<Book> update(@PathVariable String isbn, @RequestBody Book book) {
+    public ResponseEntity<Book> update(@PathVariable String isbn, @RequestBody @Valid Book book) {
         log.info("call bookService for update a book with isbn {}", isbn);
         return ResponseEntity.status(HttpStatus.OK)
                 .body(bookService.update(isbn, book));

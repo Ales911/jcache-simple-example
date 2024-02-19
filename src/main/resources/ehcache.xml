@@ -7,13 +7,13 @@
 
     <cache alias="books">
         <key-type>java.lang.String</key-type>
-        <value-type>com.example.jcachesimpleexample.Book</value-type>
+        <value-type>by.lyofa.jcachesimpleexample.Book</value-type>
         <expiry>
             <ttl unit="seconds">30</ttl>
         </expiry>
         <listeners>
             <listener>
-                <class>com.example.jcachesimpleexample.CacheEventLogger</class>
+                <class>by.lyofa.jcachesimpleexample.CacheEventLogger</class>
                 <event-firing-mode>ASYNCHRONOUS</event-firing-mode>
                 <event-ordering-mode>UNORDERED</event-ordering-mode>
                 <events-to-fire-on>CREATED</events-to-fire-on>

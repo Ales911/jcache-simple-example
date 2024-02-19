@@ -1,4 +1,4 @@
-package com.example.jcachesimpleexample;
+package by.lyofa.jcachesimpleexample;
 
 import org.ehcache.event.CacheEvent;
 import org.ehcache.event.CacheEventListener;

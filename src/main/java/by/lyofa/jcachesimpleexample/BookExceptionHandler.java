@@ -1,4 +1,4 @@
-package com.example.jcachesimpleexample;
+package by.lyofa.jcachesimpleexample;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

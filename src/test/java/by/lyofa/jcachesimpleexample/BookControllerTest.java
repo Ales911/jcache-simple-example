@@ -12,8 +12,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
-
-@WebMvcTest({BookController.class})
+@WebMvcTest(BookController.class)
 public class BookControllerTest {
 
     @Autowired
@@ -74,7 +73,7 @@ public class BookControllerTest {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.author").value("author1"))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.title").value("title1"));
     }
-    
+
     @Test
     public void updateOneShouldReturnValidBook() throws Exception {
         Mockito.when(this.bookService.update("isbn1", books.get(0))).thenReturn(books.get(0));
@@ -90,14 +89,14 @@ public class BookControllerTest {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.author").value("author1"))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.title").value("title1"));
     }
-    
+
     @Test
     public void deleteOneShouldReturnNoContent() throws Exception {
         mvc.perform(MockMvcRequestBuilders.delete("/books/isbn1")
                 .accept(MediaType.ALL))
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(MockMvcResultMatchers.status().isNoContent());
-        
+
         Mockito.verify(bookService, Mockito.times(1)).remove("isbn1");
     }
 

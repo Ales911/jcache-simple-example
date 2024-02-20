@@ -1,6 +1,14 @@
-package by.lyofa.jcachesimpleexample;
+package com.example.jcachesimpleexample;
+
+import com.example.jcachesimpleexample.Book;
+import com.example.jcachesimpleexample.BookController;
+import com.example.jcachesimpleexample.BookService;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
 
 import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -100,8 +108,10 @@ public class BookControllerTest {
         Mockito.verify(bookService, Mockito.times(1)).remove("isbn1");
     }
 
-    private String bookAsJson(Book book) {
-        return String.format("{\"isbn\":\"%s\",\"author\":\"%s\",\"title\":\"%s\"}", book.isbn(), book.author(), book.title());
+    private String bookAsJson(final Book book) throws JsonProcessingException {
+        // return String.format("{\"isbn\":\"%s\",\"author\":\"%s\",\"title\":\"%s\"}", book.isbn(), book.author(), book.title());
+        final ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
+        return ow.writeValueAsString(book);
     }
 
 }

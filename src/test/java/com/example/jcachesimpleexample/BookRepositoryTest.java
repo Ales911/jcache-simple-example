@@ -1,5 +1,7 @@
-package by.lyofa.jcachesimpleexample;
+package com.example.jcachesimpleexample;
 
+import com.example.jcachesimpleexample.Book;
+import com.example.jcachesimpleexample.BookRepository;
 import java.util.List;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

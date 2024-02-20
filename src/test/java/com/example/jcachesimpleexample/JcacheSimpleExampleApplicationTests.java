@@ -1,4 +1,4 @@
-package by.lyofa.jcachesimpleexample;
+package com.example.jcachesimpleexample;
 
 
 //@RunWith(SpringRunner.class)

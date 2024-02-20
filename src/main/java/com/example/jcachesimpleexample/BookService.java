@@ -1,4 +1,4 @@
-package by.lyofa.jcachesimpleexample;
+package com.example.jcachesimpleexample;
 
 import java.util.List;
 import javax.cache.annotation.CacheKey;

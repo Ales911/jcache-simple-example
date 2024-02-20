@@ -1,4 +1,4 @@
-package by.lyofa.jcachesimpleexample;
+package com.example.jcachesimpleexample;
 
 import jakarta.validation.Valid;
 import java.util.List;

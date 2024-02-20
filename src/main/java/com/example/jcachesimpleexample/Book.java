@@ -1,4 +1,4 @@
-package by.lyofa.jcachesimpleexample;
+package com.example.jcachesimpleexample;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

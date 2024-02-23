@@ -1,8 +1,5 @@
 package com.example.jcachesimpleexample;
 
-import com.example.jcachesimpleexample.Book;
-import com.example.jcachesimpleexample.BookRepository;
-import com.example.jcachesimpleexample.BookService;
 import java.util.List;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

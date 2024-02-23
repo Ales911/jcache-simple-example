@@ -1,7 +1,5 @@
 package com.example.jcachesimpleexample;
 
-import com.example.jcachesimpleexample.BookController;
-import com.example.jcachesimpleexample.BookService;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;

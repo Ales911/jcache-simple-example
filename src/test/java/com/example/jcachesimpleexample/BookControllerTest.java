@@ -1,8 +1,5 @@
 package com.example.jcachesimpleexample;
 
-import com.example.jcachesimpleexample.Book;
-import com.example.jcachesimpleexample.BookController;
-import com.example.jcachesimpleexample.BookService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;

@@ -7,5 +7,6 @@ docker build -t ales911/jcache-simple-example .
 
 #docker create --name jcache-simple-example ales911/jcache-simple-example 
 
-#--network host  OR -p 8080:8080
-docker run -d --network host --name jcache-simple-example ales911/jcache-simple-example 
+#docker run -d --network host --name jcache-simple-example ales911/jcache-simple-example 
+# -p <host port>:<container port>
+docker run -d -p 8080:8080 --name jcache-simple-example ales911/jcache-simple-example 

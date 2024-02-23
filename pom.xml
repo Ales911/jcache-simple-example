@@ -73,11 +73,11 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <!--configuration>
+                <configuration>
                     <image>
                         <name>ales911/jcache-simple-example</name>
                     </image>
-                </configuration-->
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.jacoco</groupId>

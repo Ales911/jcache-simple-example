@@ -93,6 +93,9 @@ public class BookServiceTest {
         // Mockito.doNothing().when(bookRepository).remove(ArgumentMatchers.isA(String.class));
         Assertions.assertDoesNotThrow(() -> bookService.remove(book.isbn()));
         
+        // Use assertAll to ensure that no exceptions are thrown during the execution of the delete method.
+        // Assertions.assertAll(() -> bookService.remove(book.isbn()));
+        
         Mockito.verify(bookRepository, Mockito.times(1)).remove(book.isbn());
     }
 
